@@ -1,0 +1,25 @@
+name: Detect duplicate images
+
+on:
+  push:
+    paths:
+      - 'images/**'
+      - 'detect_duplicates.py'
+      - '.github/workflows/detect_duplicates.yml'
+
+jobs:
+  check_duplicates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run duplicate check
+        run: python detect_duplicates.py images
