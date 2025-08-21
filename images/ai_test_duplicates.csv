@@ -1,0 +1,5 @@
+image_a,image_b,hamming_distance
+AI TEST 1.jpeg,AI TEST 6.jpeg,0
+AI TEST 3.jpeg,AI TEST 8.jpeg,0
+AI TEST 3.jpeg,AI TEST 9.jpeg,0
+AI TEST 8.jpeg,AI TEST 9.jpeg,0
